@@ -1,0 +1,74 @@
+/* :::::FrontPage::::: */
+.front-page .container{
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .logo{
+    margin-bottom: 260px;
+}
+
+.button{
+    width: 345px;
+    height: 72px;
+
+    border: 3px solid #FFEF61;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* :::::FrontPage END::::: */
+
+/* :::::QuestionsPage::::: */
+.questions-page .container{
+    width: 100vw;
+    height: 100vh;
+
+    padding: 26px 32px 26px 32px;
+
+
+}
+
+.content .card{
+    width: 392px;
+    height: 575px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;
+   
+    flex-direction: column;
+}
+
+/* :::::QuestionsPage END::::: */
+
+
+/* :::::Structural::::: */
+*{
+    box-sizing: border-box;
+}
+/* :::::Structural END::::: */
+
+/* :::::AUX::::: */
+.hidden{
+    display: none;
+}
+.show{
+    display: initial;
+}
+/* :::::AUX END::::: */
+
