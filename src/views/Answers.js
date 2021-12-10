@@ -6,12 +6,12 @@ export default function Questions() {
         {
             id: 1,
             pergunta: "pergunta1",
-            resposta: "dfghdfghdfgh"
+            resposta: "resposta1"
         },
         {
             id: 1,
             pergunta: "pergunta2",
-            resposta: ""
+            resposta: "resposta2"
         }, {
             id: 1,
             pergunta: "pergunta3",
@@ -58,7 +58,7 @@ export default function Questions() {
                             <p>{allQuestions[switchQuestions].pergunta}</p>
                         </section>
                         <footer>
-
+            
                         </footer>
 
                     </div>
