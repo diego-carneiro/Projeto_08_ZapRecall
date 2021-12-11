@@ -1,48 +1,48 @@
 import React, { useState } from "react";
+import Answers from "./Answers";
 
-export default function Questions({setQuestionsAnswers, questionsAnswers}) {
+export default function Questions() {
 
     const allQuestions = [
         {
             id: 1,
-            pergunta: "pergunta1",
-            resposta: "dfghdfghdfgh"
+            pergunta: "Qual a potencia do Nissan-GTR?",
+            resposta: "todas"
         },
         {
             id: 1,
             pergunta: "pergunta2",
-            resposta: ""
+            resposta: "resp2"
         }, {
             id: 1,
             pergunta: "pergunta3",
-            resposta: ""
+            resposta: "resp3"
         }, {
             id: 1,
             pergunta: "pergunta4",
-            resposta: ""
+            resposta: "resp4"
         }, {
             id: 1,
-            pergunta: "pergunta1",
-            resposta: ""
+            pergunta: "pergunta5",
+            resposta: "resp5"
         }, {
             id: 1,
-            pergunta: "pergunta1",
-            resposta: ""
+            pergunta: "pergunta6",
+            resposta: "resp6"
         }, {
             id: 1,
-            pergunta: "",
-            resposta: ""
+            pergunta: "7",
+            resposta: "resp7"
         }, {
             id: 1,
-            pergunta: "",
-            resposta: ""
+            pergunta: "8",
+            resposta: "resp8"
         },
     ]
 
-    console.log(allQuestions[0]);
+    const [questionsCount, setQuestionsCount] = useState(0);
 
-    const [switchQuestions, setSwitchQuestions] = useState(0);
-
+    const [screenSwitch, setScreenSwitch] = useState(0);
 
     return (
 
@@ -52,14 +52,49 @@ export default function Questions({setQuestionsAnswers, questionsAnswers}) {
                 <div className="content">
                     <div className="card">
                         <header>
-                            <p>{switchQuestions + 1}/8</p>
+                            <p>{questionsCount + 1}/8</p>
                         </header>
-                        <section className="card-content" onClick={() => setQuestionsAnswers(1)}>
-                            <p>{allQuestions[switchQuestions].pergunta}</p>
-                        </section>
-                        <footer>
-            
-                        </footer>
+
+                        {screenSwitch % 2 === 0 ?
+                            <>
+                                <section className="card-content" >
+                                    <p>{allQuestions[questionsCount].pergunta}</p>
+                                </section>
+                                <footer>
+                                    <img src="./assets/img/turn.png" onClick={() => setScreenSwitch(screenSwitch + 1)} />
+                                </footer>
+                            </>
+
+                            :
+                            <>
+                                <section className="card-content" >
+                                    <p>{allQuestions[questionsCount].resposta}</p>
+                                </section>
+                                <footer className="card-footer">
+                                    <div className="button now" onClick={() => {
+                                        setScreenSwitch(screenSwitch + 1);
+                                        setQuestionsCount(questionsCount + 1);
+                                    }}><p>Aprendi agora</p>
+                                    </div>
+                                    <div className="button no" onClick={() => {
+                                        setScreenSwitch(screenSwitch + 1);
+                                        setQuestionsCount(questionsCount + 1);
+                                    }}><p>Não lembrei</p>
+                                    </div>
+                                    <div className="button yes" onClick={() => {
+                                        setScreenSwitch(screenSwitch + 1);
+                                        setQuestionsCount(questionsCount + 1);
+                                    }}><p>Lembrei com esforço</p>
+                                    </div>
+                                    <div className="button zap" onClick={() => {
+                                        setScreenSwitch(screenSwitch + 1);
+                                        setQuestionsCount(questionsCount + 1);
+                                    }}><p>Zap!</p>
+                                    </div>
+                                </footer>
+                            </>
+                        }
+
 
                     </div>
                 </div>

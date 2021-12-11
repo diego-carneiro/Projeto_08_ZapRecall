@@ -13,19 +13,13 @@ export default function App() {
 
     const [switchFrontPage, setSwitchFrontPage] = useState(true);
 
-    const [questionsAnswers, setQuestionsAnswers] = useState (0);
-
-        console.log(questionsAnswers);
+        
     return (
         <>
         {switchFrontPage ? 
             <FrontPage setSwitchFrontPage={setSwitchFrontPage}/> :  
-            <Questions/>}
-        {questionsAnswers ?
-            <Questions setQuestionsAnswers={setQuestionsAnswers}/> :
-            <Answers/>
-        }    
+            <Questions />}
+   
         </>
-        
     );
 }
