@@ -5,21 +5,21 @@ import React, { useState } from "react";
 
 import FrontPage from "./views/FrontPage";
 import Questions from "./views/Questions";
-import Answers from "./views/Answers";
-
 
 
 export default function App() {
 
     const [switchFrontPage, setSwitchFrontPage] = useState(true);
-
+    const [switchToEnd , setSwitchToEnd] = useState(0);
         
     return (
         <>
         {switchFrontPage ? 
-            <FrontPage setSwitchFrontPage={setSwitchFrontPage}/> :  
+            <FrontPage setSwitchFrontPage={setSwitchFrontPage}/> 
+            :  
             <Questions />}
-   
+
         </>
+
     );
 }

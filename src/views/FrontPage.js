@@ -8,7 +8,7 @@ export default function FrontPage({setSwitchFrontPage}){
                     <div className="logo">
                         <img src="./assets/img/logo.png" />
                     </div>
-                    <div className="start-button" onClick={() => setSwitchFrontPage(false)}>
+                    <div className="start-button" data-identifier="start-zap-recall" onClick={() => setSwitchFrontPage(false)}>
                         <p>Treinar Memória</p>
                     </div>
                 </div>
